@@ -36,4 +36,10 @@ public class Booking extends BaseModel{
     @ManyToOne
     @JoinColumn(name = "passenger_id",nullable = false)
     private Passenger passenger;
+
+    @OneToOne
+    private ExactLocation startLocation;
+
+    @OneToOne
+    private ExactLocation endLocation;
 }
